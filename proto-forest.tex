@@ -1,0 +1,217 @@
+\documentclass{article}
+\usepackage{fullpage}
+\usepackage{tipa}
+\usepackage{graphicx}
+\usepackage{vowel}
+\usepackage{makecell}
+\usepackage{fontspec}
+\setmainfont{Noto Sans}
+\usepackage{environ}
+\usepackage{xstring}
+\usepackage[utf8]{inputenc}
+\usepackage{array}
+\usepackage{chngcntr}
+
+\newfontfamily\oghamfont{Noto Sans Ogham}
+\NewEnviron{ogham}{%
+    \oghamfont
+    \StrSubstitute{\BODY}{b}{ᚁ}[\BODY]%
+    \StrSubstitute{\BODY}{B}{ᚁ}[\BODY]%
+    \StrSubstitute{\BODY}{l}{ᚂ}[\BODY]%
+    \StrSubstitute{\BODY}{L}{ᚂ}[\BODY]%
+    \StrSubstitute{\BODY}{f}{ᚃ}[\BODY]%
+    \StrSubstitute{\BODY}{F}{ᚃ}[\BODY]%
+    \StrSubstitute{\BODY}{s}{ᚄ}[\BODY]%
+    \StrSubstitute{\BODY}{S}{ᚄ}[\BODY]%
+    \StrSubstitute{\BODY}{n}{ᚅ}[\BODY]%
+    \StrSubstitute{\BODY}{N}{ᚅ}[\BODY]%
+    \StrSubstitute{\BODY}{h}{ᚆ}[\BODY]%
+    \StrSubstitute{\BODY}{H}{ᚆ}[\BODY]%
+    \StrSubstitute{\BODY}{d}{ᚇ}[\BODY]%
+    \StrSubstitute{\BODY}{D}{ᚇ}[\BODY]%
+    \StrSubstitute{\BODY}{t}{ᚈ}[\BODY]%
+    \StrSubstitute{\BODY}{T}{ᚈ}[\BODY]%
+    \StrSubstitute{\BODY}{c}{ᚉ}[\BODY]%
+    \StrSubstitute{\BODY}{C}{ᚉ}[\BODY]%
+    \StrSubstitute{\BODY}{m}{ᚋ}[\BODY]%
+    \StrSubstitute{\BODY}{M}{ᚋ}[\BODY]%
+    \StrSubstitute{\BODY}{g}{ᚌ}[\BODY]%
+    \StrSubstitute{\BODY}{G}{ᚌ}[\BODY]%
+    \StrSubstitute{\BODY}{r}{ᚏ}[\BODY]%
+    \StrSubstitute{\BODY}{R}{ᚏ}[\BODY]%
+    \StrSubstitute{\BODY}{a}{ᚐ}[\BODY]%
+    \StrSubstitute{\BODY}{A}{ᚐ}[\BODY]%
+    \StrSubstitute{\BODY}{i}{ᚔ}[\BODY]%
+    \StrSubstitute{\BODY}{I}{ᚔ}[\BODY]%
+    \StrSubstitute{\BODY}{o}{ᚑ}[\BODY]%
+    \StrSubstitute{\BODY}{O}{ᚑ}[\BODY]%
+    \StrSubstitute{\BODY}{u}{ᚒ}[\BODY]%
+    \StrSubstitute{\BODY}{U}{ᚒ}[\BODY]%
+    \StrSubstitute{\BODY}{e}{ᚓ}[\BODY]%
+    \StrSubstitute{\BODY}{E}{ᚓ}[\BODY]%
+    \StrSubstitute{\BODY}{á}{ᚕ}[\BODY]%
+    \StrSubstitute{\BODY}{Á}{ᚕ}[\BODY]%
+    \StrSubstitute{\BODY}{é}{ᚘ}[\BODY]%
+    \StrSubstitute{\BODY}{É}{ᚘ}[\BODY]%
+    \StrSubstitute{\BODY}{í}{ᚙ}[\BODY]%
+    \StrSubstitute{\BODY}{Í}{ᚙ}[\BODY]%
+    \StrSubstitute{\BODY}{ó}{ᚖ}[\BODY]%
+    \StrSubstitute{\BODY}{Ó}{ᚖ}[\BODY]%
+    \StrSubstitute{\BODY}{ú}{ᚗ}[\BODY]%
+    \StrSubstitute{\BODY}{Ú}{ᚗ}[\BODY]%
+    \StrSubstitute{\BODY}{ }{ }[\BODY]%
+    \BODY
+}
+
+\title{Proto-Forest}
+\author{Cass Forest}
+\date{May 2024}
+
+\counterwithin*{section}{part}
+
+\begin{document}
+\pagenumbering{gobble}
+\maketitle
+\newpage
+\pagenumbering{roman}
+\tableofcontents
+\newpage
+\pagenumbering{arabic}
+\part{Introduction}
+Introduction, history, etc.
+\newpage
+\part{Phonology}
+\section{Consonants}
+\begin{center}
+\scalebox{0.7}{
+\begin{tabular}{l|c|c|c|c|c|c|c|c}
+& \textbf{Bilabial} & \textbf{Labiodental} & \textbf{Dental} & \textbf{Alveolar} & \textbf{Post-alveolar} & \textbf{Palatal} & \textbf{Velar} & \textbf{Glottal} \\ \hline
+\textbf{Nasal} & \textipa{m\super{j}} \textipa{m\super G} & & \textipa{\textsubbridge{n}\super G} & \textipa{n\super{j}} & & \textipa{\textltailn} & \textipa{N} & \\
+\textbf{Plosive} & \textipa{p\super{j}} \textipa{p\super G} \textipa{b\super{j}} \textipa{b\super G} & & \textipa{\textsubbridge{t}\super G} \textipa{\textsubbridge{d}\super G} & \textipa{t\super{j}} \textipa{d\super{j}} & & \textipa{c} \textipa{\textbardotlessj} & \textipa{k} \textipa{g} & \\
+\textbf{Fricative} & & \textipa{f\super{j}} \textipa{f\super G} \textipa{v\super{j}} \textipa{v\super G} & & \textipa{s\super G} & \textipa{S} & \textipa{\c{c}} & \textipa{x} & \textipa{h} \\
+\makecell[l]{\textbf{Lateral} \\ \textbf{approximant}} & & & & \textipa{l\super{j}} \textipa{l\super G} & & & & \\
+\textbf{Flap} & & & & \textipa{R\super{j}} \textipa{R\super G} & & & & \\
+\end{tabular}
+}
+\end{center}
+\section{Vowels}
+\subsection{Monophthongs}
+\begin{center}
+\begin{vowel}
+\putcvowel{\textipa{i:}}{1}
+\putcvowel{\textipa{I}}{13}
+\putcvowel{\textipa{e:}}{2}
+\putcvowel{\textipa{E}}{3}
+\putcvowel{\textipa{a}}{4}
+\putcvowel{\textipa{U}}{14}
+\putcvowel{\textipa{u:}}{8}
+\putcvowel{\textipa{o:}}{7}
+\putcvowel{\textipa{O}}{6}
+\putcvowel{\textipa{A:}}{5}
+\end{vowel}
+\end{center}
+\subsection{Diphthongs}
+\textipa{u\textsubarch{@}} \textipa{@\textsubarch{i}} \textipa{i\textsubarch{@}} \textipa{@\textsubarch{u}}
+\section{Stress}
+Stress falls on the first syllable.
+\section{Phonotactics}
+\subsection{Word-initial consonant clusters}
+Words can begin with clusters of two or three consonants. In general, all the consonants in a cluster agree in their quality, i.e. either all are broad or all are slender. Two-consonant clusters consist of an obstruent consonant followed by a liquid or nasal consonant (however, labial consonants may not be followed by a nasal). In addition, /\textipa{s\super G}/ and /\textipa{S}/ may be followed by a voiceless stop. Three-consonant clusters consist of /\textipa{s\super G}/ or /\textipa{S}/ plus a voiceless stop plus a liquid.
+\subsection{Post-vocalic consonant clusters and epenthesis}
+Like word-initial consonant clusters, post-vocalic consonant clusters usually agree in broad or slender quality.
+
+A cluster of /\textipa{R\super G}, \textipa{R\super{j}}/, /\textipa{l\super G}, \textipa{l\super{j}}/, or /\textipa{\textsubbridge{n}\super G}, \textipa{n\super{j}}/ followed by a labial or dorsal consonant (except the voiceless stops /\textipa{p\super G}, \textipa{p\super{j}}/, /\textipa{k}, \textipa{c}/) is broken up by an epenthetic vowel /\textipa{@}/. There is no epenthesis, however, if the vowel preceding the cluster is long or a diphthong. There is also no epenthesis into words that are at least three syllables long.
+\newpage
+\part{Morphology}
+The morphology of Proto-Forest depends on what kind of vowel or consonant the word starts with. "SC" in the tables below refers to the word starting with a slender consonant. "BC" in the tables below refers to the word starting with a broad consonant. "SV" in the tables below refers to the word starting with a slender vowel. "BV" in the tables below refers to the word starting with a broad vowel.
+\section{Nouns}
+Nouns are classed into two genders: Masculine and Feminine. Masculine nouns are nouns that end in a broad consonant or vowel. Feminine nouns are nouns that end in a slender consonant or vowel. "Redup" in the tables below means to reduplicate the first syllable onto the start of the word.
+\subsection{Masculine Noun Declension}
+\begin{center}
+\begin{tabular}{c|m{2in}|m{2in}}
+& \textbf{Singular} & \textbf{Plural} \\ \hline
+\textbf{Nominative} & No affix & Redup \\ \hline
+\textbf{Accusative} & \makecell[l]{Prefix /\textipa{e:l\super{j}}/ (SV) \\ Prefix /\textipa{e:@\textsubarch{i}l\super G} (BV) \\ Prefix /\textipa{e:l\super{j}E}/ (SC) \\ Prefix /\textipa{e:l\super{j}a}/ (BC)} & \makecell[l]{Redup + Prefix /\textipa{e:l\super{j}}/ (SV) \\ Redup + Prefix /\textipa{e:@\textsubarch{i}l\super G} (BV) \\ Redup + Prefix /\textipa{e:l\super{j}E}/ (SC) \\ Redup + Prefix /\textipa{e:l\super{j}a}/ (BC)} \\ \hline
+\textbf{Genitive} & \makecell[l]{Prefix /\textipa{SaIn\super{j}}/ (SV) \\ Prefix /\textipa{Sa\textsubbridge{n}\super G}/ (BV) \\ Prefix /\textipa{SaI}/ (SC) \\ Prefix /\textipa{Sa}/ (BC)} & \makecell[l]{Redup + Prefix /\textipa{SaIn\super{j}}/ (SV) \\ Redup + Prefix /\textipa{Sa\textsubbridge{n}\super G}/ (BV) \\ Redup + Prefix /\textipa{SaI}/ (SC) \\ Redup + Prefix /\textipa{Sa}/ (BC)} \\
+\end{tabular}
+\end{center}
+\subsubsection{Example}
+\begin{center}
+\begin{ogham}
+ífígrian\\
+\end{ogham}
+/\textipa{i:f\super{j}i:{\textbardotlessj}R\super{j}i\textsubarch{@}\textsubbridge{n}\super G}/
+
+\begin{tabular}{c|c|c}
+& \textbf{Singular} & \textbf{Plural} \\ \hline
+\textbf{Nominative} & \makecell{\begin{ogham} ífígrian \end{ogham} \\ /\textipa{i:f\super{j}i:{\textbardotlessj}R\super{j}i\textsubarch{@}\textsubbridge{n}\super G}/} & \makecell{\begin{ogham} ífífígrian \end{ogham} \\ /\textipa{i:f\super{j}i:f\super{j}i:{\textbardotlessj}R\super{j}i\textsubarch{@}\textsubbridge{n}\super G}/} \\ \hline
+\textbf{Accusative} & \makecell{\begin{ogham} élífígrian \end{ogham} \\ /\textipa{e:l\super{j}i:f\super{j}i:{\textbardotlessj}R\super{j}i\textsubarch{@}\textsubbridge{n}\super G}/} & \makecell{\begin{ogham} élífífígrian \end{ogham} \\ /\textipa{e:l\super{j}i:f\super{j}i:f\super{j}i:{\textbardotlessj}R\super{j}i\textsubarch{@}\textsubbridge{n}\super G}/} \\ \hline
+\textbf{Genitive} & \makecell{\begin{ogham} seainífígrian \end{ogham} \\ /\textipa{SaIn\super{j}i:f\super{j}i:{\textbardotlessj}R\super{j}i\textsubarch{@}\textsubbridge{n}\super G}/} & \makecell{\begin{ogham} seanífífígrian \end{ogham} \\ /\textipa{SaIn\super{j}i:f\super{j}i:f\super{j}i:{\textbardotlessj}R\super{j}i\textsubarch{@}\textsubbridge{n}\super G}/} \\
+\end{tabular}
+\end{center}
+\subsection{Feminine Noun Declension}
+\begin{center}
+\begin{tabular}{c|p{2in}|p{2in}}
+& \textbf{Singular} & \textbf{Plural} \\ \hline
+\textbf{Nominative} & No affix & \makecell[l]{Prefix /\textipa{R\super{j}}/ (SV) \\ Prefix /\textipa{R\super G}/ (BV) \\ Prefix /\textipa{R\super{j}i:}/ (SC) \\ Prefix /\textipa{R\super{j}i:@\textsubarch{i}}/ (BC)} \\ \hline
+\textbf{Accusative} & \makecell[l]{Suffix /\textipa{n\super{j}i:}/ (SV) \\ Suffix /\textipa{i:}/ (BV/SC) \\ Suffix /\textipa{@\textsubarch{i}i:}/ (BC)} & \makecell[l]{Prefix /\textipa{R\super{j}}/ + Suffix /\textipa{n\super{j}i:}/ (SV) \\ Prefix /\textipa{R\super G}/ + Suffix /\textipa{i:}/ (BV) \\ Prefix /\textipa{R\super{j}i:}/ + Suffix /\textipa{i:}/ (SC) \\ Prefix /\textipa{R\super{j}i:@\textsubarch{i}}/ + Suffix /\textipa{@\textsubarch{i}i:}/ (BC)} \\ \hline
+\textbf{Genitive} & \makecell[l]{Suffix /\textipa{@\textsubarch{i}}/ (BV/SV/BC) \\ Suffix /\textipa{i\textsubarch{@}}/ (SC)} & \makecell[l]{Prefix /\textipa{R\super{j}}/ + Suffix /\textipa{@\textsubarch{i}}/ (SV) \\ Prefix /\textipa{R\super G}/ + Suffix /\textipa{@\textsubarch{i}}/ (BV) \\ Prefix /\textipa{R\super{j}i:}/ + Suffix /\textipa{i\textsubarch{@}}/ (SC) \\ Prefix /\textipa{R\super{j}i:@\textsubarch{i}}/ + Suffix /\textipa{@\textsubarch{i}}/ (BC)}
+\end{tabular}
+\end{center}
+\subsubsection{Example}
+\begin{center}
+\begin{ogham}
+gí\\
+\end{ogham}
+/\textipa{{\textbardotlessj}i:}/
+
+\begin{tabular}{c|c|c}
+& \textbf{Singular} & \textbf{Plural} \\ \hline
+\textbf{Nominative} & \makecell{\begin{ogham} gí \end{ogham} \\ /\textipa{{\textbardotlessj}i:}/} & \makecell{\begin{ogham} rígí \end{ogham} \\ /\textipa{R\super{j}i:{\textbardotlessj}i:}/} \\ \hline
+\textbf{Accusative} & \makecell{\begin{ogham} gíní \end{ogham} \\ /\textipa{{\textbardotlessj}i:n\super{j}i:}/} & \makecell{\begin{ogham} rígíní \end{ogham} \\ /\textipa{R\super{j}i:{\textbardotlessj}i:n\super{j}i:}/} \\ \hline
+\textbf{Genitive} & \makecell{\begin{ogham} gía \end{ogham} \\ /\textipa{{\textbardotlessj}i:@\textsubarch{i}}/} & \makecell{\begin{ogham} rígía \end{ogham} \\ /\textipa{R\super{j}i:{\textbardotlessj}i:@\textsubarch{i}}/} \\
+\end{tabular}
+\end{center}
+\section{Pronouns}
+All pronouns end in vowels.
+
+\begin{center}
+\begin{tabular}{c|c|c}
+\textbf{Nominative} & \textbf{Accusative} & \textbf{Genitive} \\ \hline
+\makecell{Suffix /\textipa{n\super{j}}/ (SV) \\ Suffix /\textipa{\textsubbridge{n}\super G}/ (BV)} & \makecell{Suffix /\textipa{In\super{j}}/ (BV) \\ Suffix /\textipa{@\textsubarch{i}\textsubbridge{n}\super G}/ (SV)} & \makecell{Suffix /\textipa{\textsubbridge{n}\super G}/ (BV) \\ Suffix /\textipa{@\textsubarch{i}\textsubbridge{n}\super{G}@\textsubarch{i}}/ (SV)} \\
+\end{tabular}
+\end{center}
+\subsection{Example}
+\begin{center}
+\begin{ogham}
+ei\\
+\end{ogham}
+/\textipa{E}/
+
+\begin{tabular}{c|c|c}
+\textbf{Nominative} & \textbf{Accusative} & \textbf{Genitive} \\ \hline
+\makecell{\begin{ogham} ein \end{ogham} \\ /\textipa{En\super{j}}/} & \makecell{\begin{ogham} eian \end{ogham} \\ /\textipa{E@\textsubarch{i}\textsubbridge{n}\super G}/} & \makecell{\begin{ogham} eiana \end{ogham} \\ /\textipa{E@\textsubarch{i}\textsubbridge{n}\super{G}@\textsubarch{i}}/} \\
+\end{tabular}
+\end{center}
+\section{Verbs}
+\begin{center}
+\begin{tabular}{c|c|c|c}
+& \textbf{PRES} & \textbf{PAST} & \textbf{FUT} \\ \hline
+\textbf{1.SG} & \makecell{Prefix /\textipa{f\super{G}u:}/ (BC/SV/BV) \\ Prefix /\textipa{f\super{G}u:I}/ (SC)} & \makecell{Prefix /\textipa{t\super{j}}/ (SV) \\ Prefix /\textipa{\textsubbridge{t}\super{G}}/ (BV) \\ Prefix /\textipa{t\super{j}i:}/ (SC) \\ Prefix /\textipa{t\super{j}i:@\textsubarch{i}}/ (BC)} & \makecell{Prefix /\textipa{m\super{G}}/ (BV) \\ Prefix /\textipa{m\super{j}}/ (SV) \\ Prefix /\textipa{m\super{G}@\textsubarch{i}}/ (BC) \\ Prefix /\textipa{m\super{G}@\textsubarch{u}}/ (SC)} \\ \hline
+\textbf{2.SG} & \makecell{Prefix /\textipa{ce:}/ (SC/BV/SV) \\ Prefix /\textipa{ce:@\textsubarch{i}}/ (BC)} & \makecell{Prefix /\textipa{k}/ (BV) \\ Prefix /\textipa{c}/ (SV) \\ Prefix /\textipa{ko:}/ (BC) \\ Prefix /\textipa{ko:I}/ (SC)} & \makecell{Prefix /\textipa{sk}/ (BV) \\ Prefix /\textipa{Sc}/ (SV) \\ Prefix /\textipa{skA:}/ (BC) \\ Prefix /\textipa{skA:I}/ (SC)} \\ \hline
+\textbf{3.SG} & \makecell{Prefix /\textipa{k}/ (BV) \\ Prefix /\textipa{c}/ (SV) \\ Prefix /\textipa{ca}/ (BC) \\ Prefix /\textipa{caI}/ (SC)} & \makecell{Prefix /\textipa{d\super{j}R\super{j}E}/ (SV/BV/SC) \\ Prefix /\textipa{d\super{j}R\super{j}E@\textsubarch{i}}/ (BC)} & \makecell{Prefix /\textipa{U\textsubbridge{n}\super{G}}/ (BV) \\ Prefix /\textipa{In\super{j}}/ (SV) \\ Prefix /\textipa{U\textsubbridge{n}\super{G}@\textsubarch{i}}/ (BC) \\ Prefix /\textipa{U\textsubbridge{n}\super{G}@\textsubarch{u}}/ (SC)} \\ \hline
+\end{tabular}
+\end{center}
+\newpage
+\part{Derivational Morphology}
+\newpage
+\part{Syntax}
+\newpage
+\part{Semantics \& Pragmatics}
+\newpage
+\part{Orthography}
+\newpage
+\part{Examples}
+\newpage
+\part{Lexicon}
+\end{document}
