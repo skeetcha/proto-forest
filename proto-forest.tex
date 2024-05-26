@@ -11,6 +11,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage{array}
 \usepackage{chngcntr}
+\usepackage{fancyhdr}
+\usepackage{multicol}
 
 \newfontfamily\oghamfont{Noto Sans Ogham}
 \NewEnviron{ogham}{%
@@ -39,6 +41,8 @@
     \StrSubstitute{\BODY}{G}{ᚌ}[\BODY]%
     \StrSubstitute{\BODY}{r}{ᚏ}[\BODY]%
     \StrSubstitute{\BODY}{R}{ᚏ}[\BODY]%
+    \StrSubstitute{\BODY}{p}{ᚊ}[\BODY]%
+    \StrSubstitute{\BODY}{P}{ᚊ}[\BODY]%
     \StrSubstitute{\BODY}{a}{ᚐ}[\BODY]%
     \StrSubstitute{\BODY}{A}{ᚐ}[\BODY]%
     \StrSubstitute{\BODY}{i}{ᚔ}[\BODY]%
@@ -68,6 +72,12 @@
 \date{May 2024}
 
 \counterwithin*{section}{part}
+
+\fancyhead[L]{\textsf{\rightmark}} % Top left header
+\fancyhead[R]{\textsf{\leftmark}} % Top right header
+\renewcommand{\headrulewidth}{1.4pt} % Rule under the header
+\fancyfoot[C]{\textbf{\textsf{\thepage}}} % Bottom center footer
+\renewcommand{\footrulewidth}{1.4pt} % Rule under the footer
 
 \begin{document}
 \pagenumbering{gobble}
@@ -257,12 +267,99 @@ To turn a word into its dimunitive form, suffix /\textipa{St\super{j}}/ if it en
 To turn a word into its augmentative form, suffix /\textipa{I}/ if it ends in a slender consonant or any vowel, or /\textipa{@\textsubarch{u}}/ if it ends in a broad consonant.
 \newpage
 \part{Syntax}
-\newpage
-\part{Semantics \& Pragmatics}
+Proto-Forest uses VSO word order and uses prepositions. Double negatives remain negative. Nouns precede both articles, determiners, and adjectives, but come after numbers and pronouns. When a noun possess's another noun, the possessee comes first. There is no indefinite article, but there is a definite article.
 \newpage
 \part{Orthography}
+Broad consonants must appear next to broad vowels. Slender consonants must appear next to slender vowels. The following consonants are broad consonants and vowels.
+\begin{center}
+\begin{tabular}{c|c|c}
+\textbf{Sound} & \textbf{Ogham} & \textbf{Romanization} \\ \hline
+\textipa{b\super{G}} & \begin{ogham} b \end{ogham} & b \\
+\textipa{p\super{G}} & \begin{ogham} p \end{ogham} & p \\
+\textipa{m\super{G}} & \begin{ogham} m \end{ogham} & m \\
+\textipa{f\super{G}} & \begin{ogham} f \end{ogham} & f \\ 
+\textipa{v\super{G}} & \begin{ogham} bh \end{ogham} / \begin{ogham} mh \end{ogham} & bh / mh \\
+\textipa{\textsubbridge{n}\super{G}} & \begin{ogham} n \end{ogham} & n \\
+\textipa{\textsubbridge{t}\super{G}} & \begin{ogham} t \end{ogham} & t \\
+\textipa{\textsubbridge{d}\super{G}} & \begin{ogham} d \end{ogham} & d \\
+\textipa{s\super{G}} & \begin{ogham} s \end{ogham} & s \\
+\textipa{l\super{G}} & \begin{ogham} l \end{ogham} & l \\
+\textipa{R\super{G}} & \begin{ogham} r \end{ogham} & r \\
+\textipa{N} & \begin{ogham} ng \end{ogham} & ng \\
+\textipa{k} & \begin{ogham} c \end{ogham} & c \\
+\textipa{g} & \begin{ogham} g \end{ogham} & g \\
+\textipa{x} & \begin{ogham} ch \end{ogham} & ch \\
+\textipa{@\textsubarch{i}} & \begin{ogham} a \end{ogham} & a \\
+\textipa{O} & \begin{ogham} o \end{ogham} & o \\
+\textipa{U} & \begin{ogham} u \end{ogham} & u \\
+\textipa{A:} & \begin{ogham} á \end{ogham} & á \\
+\textipa{o:} & \begin{ogham} ó \end{ogham} & ó \\
+\textipa{u:} & \begin{ogham} ú \end{ogham} & ú \\
+\end{tabular}
+\end{center}
+
+The following are slender consonants and vowels.
+
+\begin{center}
+\begin{tabular}{c|c|c}
+\textbf{Sound} & \textbf{Ogham} & \textbf{Romanization} \\ \hline
+\textipa{b\super{j}} & \begin{ogham} b \end{ogham} & b \\
+\textipa{p\super{j}} & \begin{ogham} p \end{ogham} & p \\
+\textipa{m\super{j}} & \begin{ogham} m \end{ogham} & m \\
+\textipa{f\super{j}} & \begin{ogham} f \end{ogham} & f \\
+\textipa{v\super{j}} & \begin{ogham} bh \end{ogham} / \begin{ogham} mh \end{ogham} & bh / mh \\
+\textipa{n\super{j}} & \begin{ogham} n \end{ogham} & n \\
+\textipa{t\super{j}} & \begin{ogham} t \end{ogham} & t \\
+\textipa{d\super{j}} & \begin{ogham} d \end{ogham} & d \\
+\textipa{S} & \begin{ogham} s \end{ogham} & s \\
+\textipa{l\super{j}} & \begin{ogham} l \end{ogham} & l \\
+\textipa{R\super{j}} & \begin{ogham} r \end{ogham} & r \\
+\textipa{\textltailn} & \begin{ogham} ng \end{ogham} & ng \\
+\textipa{c} & \begin{ogham} c \end{ogham} & c \\
+\textipa{\textbardotlessj} & \begin{ogham} g \end{ogham} & g \\
+\textipa{\c{c}} & \begin{ogham} ch \end{ogham} & ch \\
+\textipa{I} & \begin{ogham} i \end{ogham} & i \\
+\textipa{E} & \begin{ogham} e \end{ogham} & e \\
+\textipa{i:} & \begin{ogham} í \end{ogham} & í \\
+\textipa{e:} & \begin{ogham} é \end{ogham} & é \\
+\end{tabular}
+\end{center}
+
+The consonant /\textipa{h}/ (\begin{ogham} h \end{ogham}) (h) is neither broad nor slender.
+
+As for diphthongs...
+
+\begin{center}
+\begin{tabular}{c|c|c|c|c}
+\textbf{Sound} & \textbf{Ogham} & \textbf{Romanization} & \textbf{Beginning Quality} & \textbf{Ending Quality} \\ \hline
+\textipa{i\textsubarch{@}} & \begin{ogham} ia \end{ogham} & ia & Slender & Broad \\
+\textipa{@\textsubarch{u}} & \begin{ogham} ai \end{ogham} & ai & Slender & Broad \\
+\textipa{u\textsubarch{@}} & \begin{ogham} ua \end{ogham} & ua & Broad & Broad \\
+\end{tabular}
+\end{center}
 \newpage
 \part{Examples}
 \newpage
 \part{Lexicon}
+\newpage
+\pagestyle{fancy}
+\setlength{\headsep}{30pt}
+\setlength{\columnsep}{0.5in}
+\footnotesize
+\begin{center}
+\section*{A}
+\end{center}
+\begin{multicols}{2}
+\begin{ogham} a \end{ogham} \textit{ a} /\textipa{@\textsubarch{i}}/ \textit{n.} Life, a person's being. Also refers to a period of time from birth to death. \textit{num.} Fourteen.
+
+\begin{ogham} abh \end{ogham} \textit{ abh} /\textipa{@\textsubarch{i}v\super{G}}/ \textit{num.} Fifteen.
+
+\begin{ogham} ad \end{ogham} \textit{ ad} /\textipa{@\textsubarch{i}\textsubbridge{d}\super{G}}/ \textit{v.} Improve, to bring into a more desirable or excellent condition.
+
+\begin{ogham} áigilea \end{ogham} \textit{ áigilea} /\textipa{A:I{\textbardotlessj}Il\super{j}a}/ \textit{n.} Insurance, coverage by contract in which one party agrees to indemnify or reimburse another for loss that occurs under the terms of the contract.
+
+\begin{ogham} ainsear \end{ogham} \textit{ ainsear} /\textipa{@\textsubarch{i}\textsubbridge{n}\super{G}SaR\super{G}}/ \textit{n.} Heat, a relatively high degree of warmth.
+
+\begin{ogham} aisea \end{ogham} \textit{ aisea} /\textipa{@\textsubarch{u}Sa}/ \textit{n.} Sailor, a person whose occupation is sailing or navigation; mariner.
+\end{multicols}
 \end{document}
