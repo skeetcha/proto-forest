@@ -73,11 +73,8 @@
 
 \counterwithin*{section}{part}
 
-\fancyhead[L]{\textsf{\rightmark}} % Top left header
-\fancyhead[R]{\textsf{\leftmark}} % Top right header
-\renewcommand{\headrulewidth}{1.4pt} % Rule under the header
-\fancyfoot[C]{\textbf{\textsf{\thepage}}} % Bottom center footer
-\renewcommand{\footrulewidth}{1.4pt} % Rule under the footer
+\newcommand{\entry}[2]{\markboth{#1}{#1}\item[#1] \begin{ogham} #1 \end{ogham} { }/\textipa{#2}/}
+\newcommand{\definition}[2]{{ }\textit{#1} #2}
 
 \begin{document}
 \pagenumbering{gobble}
@@ -342,24 +339,44 @@ As for diphthongs...
 \newpage
 \part{Lexicon}
 \newpage
-\pagestyle{fancy}
 \setlength{\headsep}{30pt}
-\setlength{\columnsep}{0.5in}
-\footnotesize
+\setlength{\columnsep}{0.1in}
 \begin{center}
 \section*{A}
 \end{center}
+\pagestyle{fancy}
+\fancyhead[L]{\textsf{\rightmark}} % Top left header
+\fancyhead[R]{\textsf{\leftmark}} % Top right header
+\renewcommand{\headrulewidth}{1.4pt} % Rule under the header
+\fancyfoot[C]{\textbf{\textsf{\thepage}}} % Bottom center footer
+\renewcommand{\footrulewidth}{1.4pt} % Rule under the footer
+\footnotesize
 \begin{multicols}{2}
-\begin{ogham} a \end{ogham} \textit{ a} /\textipa{@\textsubarch{i}}/ \textit{n.} Life, a person's being. Also refers to a period of time from birth to death. \textit{num.} Fourteen.
-
-\begin{ogham} abh \end{ogham} \textit{ abh} /\textipa{@\textsubarch{i}v\super{G}}/ \textit{num.} Fifteen.
-
-\begin{ogham} ad \end{ogham} \textit{ ad} /\textipa{@\textsubarch{i}\textsubbridge{d}\super{G}}/ \textit{v.} Improve, to bring into a more desirable or excellent condition.
-
-\begin{ogham} áigilea \end{ogham} \textit{ áigilea} /\textipa{A:I{\textbardotlessj}Il\super{j}a}/ \textit{n.} Insurance, coverage by contract in which one party agrees to indemnify or reimburse another for loss that occurs under the terms of the contract.
-
-\begin{ogham} ainsear \end{ogham} \textit{ ainsear} /\textipa{@\textsubarch{i}\textsubbridge{n}\super{G}SaR\super{G}}/ \textit{n.} Heat, a relatively high degree of warmth.
-
-\begin{ogham} aisea \end{ogham} \textit{ aisea} /\textipa{@\textsubarch{u}Sa}/ \textit{n.} Sailor, a person whose occupation is sailing or navigation; mariner.
+\begin{description}
+\entry{a}{@\textsubarch{i}} \definition{n.}{Life, a person's being. Also refers to a period of time from birth to death.} \definition{num.}{Fourteen.}
+\entry{abh}{@\textsubarch{i}v\super{G}} \definition{num.}{Fifteen.}
+\entry{ad}{@\textsubarch{i}\textsubbridge{d}\super{G}} \definition{v.}{Improve, to bring into a more desirable or excellent condition.}
+\entry{áigilea}{A:I{\textbardotlessj}Il\super{j}a} \definition{n.}{Insurance, coverage by contract in which one party agrees to indemnify or reimburse another for loss that occurs under the terms of the contract.}
+\entry{ainsear}{@\textsubarch{i}n\super{j}SaR\super{G}} \definition{n.}{Heat, a relatively high degree of warmth.}
+\entry{aisea}{@\textsubarch{u}Sa} \definition{n.}{Sailor, a person whose occupation is sailing or navigation; mariner.}
+\entry{aiseó}{@\textsubarch{u}So:} \definition{n.}{Sorrow, distress caused by loss, affliction, disappointment, etc.; grief, sadness, or regret.}
+\entry{áitria}{A:It\super{j}R\super{j}i@\textsubarch{@}} \definition{Meeting, an assembly or conference of persons for a specific purpose.}
+\entry{ámú}{A:m\super{G}u:} \definition{n.}{Certificate, a document serving as evidence or as written testimony, as of status, qualifications, privileges, or the truth of something.}
+\entry{arsaogóc}{@\textsubarch{i}R\super{G}s\super{G}e:go:k} \definition{adj.}{having the property of adhering, as glue; adhesive.}
+\entry{ást}{A:s\super{G}\textsubbridge{t}\super{G}} \definition{v.}{Compare, to examine (two or more objects, ideas, people, etc.) in order to note similarities and differences.}
+\end{description}
+\end{multicols}
+\begin{center}
+\section*{B}
+\end{center}
+\begin{multicols}{2}
+\begin{description}
+\entry{bacha}{b\super{G}@\textsubarch{i}x@\textsubarch{i}} \definition{n.}{Pepper, any plant of the genus Piper.}
+\entry{bam}{b\super{G}@\textsubarch{i}m\super{G}} \definition{n.}{Brother, a male offspring having both parents in common with another offspring; a male sibling.} \definition{prep.}{Like, in like manner with; similarly to; in the manner characteristic of.}
+\entry{bas}{b\super{G}@\textsubarch{i}s\super{G}} \definition{v.}{Get, to receive or come to have possession, use, or enjoyment of.}
+\entry{béatha}{b\super{j}e:@\textsubarch{i}h@\textsubarch{i}} \definition{n.}{Bridge, a structure spanning and providing passage over a river, chasm, road, or the like.}
+\entry{beibh}{b\super{j}Ev\super{j}} \definition{n.}{Gold, a precious yellow metallic element, highly malleable and ductile, and not subject to oxidation or corrosion.}
+\entry{bheist}{v\super{j}ESt\super{j}} \definition{adj.}{Weird, strange; odd; bizarre.}
+\end{description}
 \end{multicols}
 \end{document}
