@@ -13,6 +13,7 @@
 \usepackage{chngcntr}
 \usepackage{fancyhdr}
 \usepackage{multicol}
+\usepackage{gb4e}
 
 \newfontfamily\oghamfont{Noto Sans Ogham}
 \NewEnviron{ogham}{%
@@ -64,7 +65,7 @@
     \StrSubstitute{\BODY}{ú}{ᚗ}[\BODY]%
     \StrSubstitute{\BODY}{Ú}{ᚗ}[\BODY]%
     \StrSubstitute{\BODY}{ }{ }[\BODY]%
-    \BODY
+    ᚛\BODY᚜
 }
 
 \title{Proto-Forest}
@@ -336,6 +337,76 @@ As for diphthongs...
 \end{center}
 \newpage
 \part{Examples}
+\begin{exe}
+\ex \begin{ogham} ceachrápo bhásmoi pei smaicrini \end{ogham}
+\glll ceachrápo bhásmoi pei smaicrini\\
+\textipa{caxR\super{G}A:p\super{G}O} \textipa{v\super{G}A:s\super{G}m\super{G}OI} \textipa{p\super{j}E} \textipa{s\super{G}m\super{G}@\textsubarch{u}cR\super{j}In\super{j}I}\\
+give.3.SG.PRES sun.SG.NOM the light.SG.ACC\\
+\trans 'The sun shines.'
+\end{exe}
+\begin{exe}
+\ex \begin{ogham} ceachrápo bhásmoi pei smaicrini \end{ogham}
+\glll ceachrápo bhásmoi pei smaicrini\\
+\textipa{caxR\super{G}A:p\super{G}O} \textipa{v\super{G}A:s\super{G}m\super{G}OI} \textipa{p\super{j}E} \textipa{s\super{G}m\super{G}@\textsubarch{u}cR\super{j}In\super{j}I}\\
+give.3.SG.PRES sun.SG.NOM the light.SG.ACC\\
+\trans 'The sun is shining.'
+\end{exe}
+\begin{exe}
+\ex \begin{ogham} dreiachrápo bhásmoi pei smaicrini \end{ogham}
+\glll dreiachrápo bhásmoi pei smaicrini\\
+\textipa{d\super{j}R\super{j}E@\textsubarch{i}xR\super{G}A:p\super{G}O} \textipa{v\super{G}A:s\super{G}m\super{G}OI} \textipa{p\super{j}E} \textipa{s\super{G}m\super{G}@\textsubarch{u}cR\super{j}In\super{j}I}\\
+give.3.SG.PAST sun.SG.NOM the light.SG.ACC\\
+\trans 'The sun shone.'
+\end{exe}
+\begin{exe}
+\ex \begin{ogham} unachrápo bhásmoi pei smaicrini \end{ogham}
+\glll unachrápo bhásmoi pei smaicrini\\
+\textipa{U\textsubbridge{n}\super{G}@\textsubarch{i}xR\super{G}A:p\super{G}O} \textipa{v\super{G}A:s\super{G}m\super{G}OI} \textipa{p\super{j}E} \textipa{s\super{G}m\super{G}@\textsubarch{u}cR\super{j}In\super{j}I}\\
+give.3.SG.FUT sun.SG.NOM the light.SG.ACC\\
+\trans 'The sun will shine.'
+\end{exe}
+\begin{exe}
+\ex \begin{ogham} dreiachrápo bhásmoi pei smaicrini \end{ogham}
+\glll dreiachrápo bhásmoi pei smaicrini\\
+\textipa{d\super{j}R\super{j}E@\textsubarch{i}xR\super{G}A:p\super{G}O} \textipa{v\super{G}A:s\super{G}m\super{G}OI} \textipa{p\super{j}E} \textipa{s\super{G}m\super{G}@\textsubarch{u}cR\super{j}In\super{j}I}\\
+give.3.SG.PAST sun.SG.NOM the light.SG.ACC\\
+\trans 'The sun has been shining.'
+\end{exe}
+\begin{exe}
+\ex \begin{ogham} ceachrápo pisme bhásmoi pei smaicrini \end{ogham}
+\glll ceachrápo pismei bhásmoi pei smaicrini\\
+\textipa{caxR\super{G}A:p\super{G}O} \textipa{p\super{j}ISm\super{j}E} \textipa{v\super{G}A:s\super{G}m\super{G}OI} \textipa{p\super{j}E} \textipa{s\super{G}m\super{G}@\textsubarch{u}cR\super{j}In\super{j}I}\\
+give.3.SG.PRES again sun.SG.NOM the light.SG.ACC\\
+\trans 'The sun is shining again.'
+\end{exe}
+\begin{exe}
+\ex \begin{ogham} dreiachrápo dáithí bhásmoi pei smaicrini \end{ogham}
+\glll dreiachrápo dáithí bhásmoi pei smaicrini\\
+\textipa{d\super{j}R\super{j}E@\textsubarch{i}xR\super{G}A:p\super{G}O} \textipa{\textsubbridge{d}\super{G}A:Ihi:} \textipa{v\super{G}A:s\super{G}m\super{G}OI} \textipa{p\super{j}E} \textipa{s\super{G}m\super{G}@\textsubarch{u}cR\super{j}In\super{j}I}\\
+give.3.SG.FUT tomorrow sun.SG.NOM the light.SG.ACC\\
+\trans 'The sun will shine tomorrow.'
+\end{exe}
+\begin{exe}
+\ex \begin{ogham} ceachrápo bhásmoi pei smaicrini thu \end{ogham}
+\glll ceachrápo bhásmoi pei smaicrini thu\\
+\textipa{caxR\super{G}A:p\super{G}O} \textipa{v\super{G}A:s\super{G}m\super{G}OI} \textipa{p\super{j}E} \textipa{s\super{G}m\super{G}@\textsubarch{u}cR\super{j}In\super{j}I} \textipa{hU}\\
+give.3.SG.PRES sun.SG.NOM the light.SG.ACC much\\
+\trans 'The sun shines brightly.'
+\end{exe}
+\begin{exe}
+\ex \begin{ogham} ceachrápo bhásmoi smaicrithiu pei smaicrini \end{ogham}
+\glll ceachrápo bhásmoi smaicrithiu pei smaicrini\\
+\textipa{caxR\super{G}A:p\super{G}O} \textipa{v\super{G}A:s\super{G}m\super{G}OI} \textipa{s\super{G}m\super{G}@\textsubarch{u}cR\super{j}Ihu} \textipa{p\super{j}E} \textipa{s\super{G}m\super{G}@\textsubarch{u}cR\super{j}In\super{j}I}\\
+give.3.SG.PRES sun.SG.NOM bright the light.SG.ACC\\
+\trans 'The bright sun shines.'
+\end{exe}
+\begin{exe}
+\ex \begin{ogham} ceaifíchliu smu bhásmoi pei \end{ogham}
+\glll ceaifíchliu smu bhásmoi pei\\
+\textipa{caIf\super{j}i:\c{c}l\super{j}u} \textipa{s\super{G}m\super{G}U} \textipa{v\super{G}A:s\super{G}m\super{G}OI} \textipa{p\super{j}E}\\
+wake.3.SG.PRES now sun.SG.NOM the\\
+\trans 'The sun is rising now.'
+\end{exe}
 \newpage
 \part{Lexicon}
 \newpage
@@ -376,6 +447,8 @@ As for diphthongs...
 \entry{bas}{b\super{G}@\textsubarch{i}s\super{G}} \definition{v.}{Get, to receive or come to have possession, use, or enjoyment of.}
 \entry{béatha}{b\super{j}e:@\textsubarch{i}h@\textsubarch{i}} \definition{n.}{Bridge, a structure spanning and providing passage over a river, chasm, road, or the like.}
 \entry{beibh}{b\super{j}Ev\super{j}} \definition{n.}{Gold, a precious yellow metallic element, highly malleable and ductile, and not subject to oxidation or corrosion.}
+\entry{bhásmo}{v\super{G}A:s\super{G}m\super{G}O} \definition{n.}{Sun, a star, especially one that has planets and other celestial bodies revolving around it.}
+\entry{bhásmoi}{v\super{G}A:s\super{G}m\super{G}OI} \definition{prop. n.}{Sun, the star that is the central body of the earth's solar system, around which the planets revolve and from which they receive light and heat.}
 \entry{bheist}{v\super{j}ESt\super{j}} \definition{adj.}{Weird, strange; odd; bizarre.}
 \entry{bhó}{v\super{G}o:} \definition{n.}{Boundary, a line or limit where one thing ends and another begins, or something that indicates such a line or limit. Also refers to Edge, a line or border at which a surface terminates; Border, the part or edge of a surface or area that forms its outer boundary; Mouth, the outfall at the lower end of a river or stream, where flowing water is discharged, as into a lake, sea, or ocean.}
 \entry{bhoirei}{v\super{G}OIR\super{j}E} \definition{n.}{Fashion, a prevailing custom or style of dress, etiquette, socializing, etc.}
@@ -415,6 +488,7 @@ As for diphthongs...
 \entry{chlíl}{\c{c}l\super{j}i:l\super{j}} \definition{n.}{Sky, the region of the clouds or the upper air; the upper atmosphere of the earth.}
 \entry{chlú}{xl\super{G}u:} \definition{n.}{God, one of several deities, especially a male deity, presiding over some portion of worldly affairs.}
 \entry{choichtiart}{xOI\c{c}t\super{j}i\textsubarch{@}R\super{G}@\textsubbridge{t}\super{G}} \definition{n.}{Winery, an establishment for making wine.}
+\entry{chrápo}{xR\super{G}A:p\super{G}O} \definition{v.}{Give, to present voluntarily and without expecting compensation; bestow.}
 \entry{chú}{xu:} \definition{v.}{Crawl, to move in a prone position with the body resting on or close to the ground, as a worm or caterpillar, or on the hands and kness, as a young child.}
 \entry{chust}{xUs\super{G}\textsubbridge{t}\super{G}} \definition{v.}{Reach, to get to or get as far as in moving, going, traveling, etc.}
 \entry{ciú}{cu:} \definition{v.}{Test, the means by which the presence, quality, or genuineness of anything is determined; a means of trial.}
@@ -445,6 +519,7 @@ As for diphthongs...
 \begin{description}
 \entry{da}{\textsubbridge{d}\super{G}@\textsubarch{i}} \definition{num.}{Six.}
 \entry{dacu}{\textsubbridge{d}\super{G}@\textsubarch{i}kU} \definition{n.}{Mistake, an error in action, calculation, opinion, or judgment caused by poor reasoning, carelessness, insufficient knowledge, etc.}
+\entry{dáithí}{\textsubbridge{d}\super{G}A:Ihi:} \definition{adv.}{Tomorrow, on the morrow; on the day following today.}
 \entry{dam}{\textsubbridge{d}\super{G}@\textsubarch{i}m\super{G}} \definition{n.}{Candy, any of a variety of confections made with sugar, syrup, etc., often combined with chocolate, fruit, nuts, etc.}
 \entry{das}{\textsubbridge{d}\super{G}@\textsubarch{i}s\super{G}} \definition{adj.}{Stupid, lacking ordinary quickness and keenness of mind; slow-witted.}
 \entry{deiadait}{d\super{j}E@\textsubarch{i}\textsubbridge{d}\super{G}@\textsubarch{u}t\super{j}} \definition{n.}{Glove, a covering for the hand made with a separate sheath for each finger and for the thumb.}
@@ -480,6 +555,7 @@ As for diphthongs...
 \entry{failia}{f\super{G}@\textsubarch{u}l\super{j}i\textsubarch{@}} \definition{conj.}{Though, (used in introducing a subordinate clause, which is often marked by ellipsis) notwithstanding that; in spite of the fact that; although. Also refers to Although, in spite of the fact that; even though; though.}
 \entry{feisceo}{f\super{j}ESco:} \definition{v.}{Wait, to remain inactive or in a state of repose, as until something expected happens.}
 \entry{fí}{f\super{j}i:} \definition{pron.}{You (singular).}
+\entry{fíchliu}{f\super{j}i:\c{c}l\super{j}u} \definition{v.}{Wake, to become roused from sleep; awake; awaken; waken.}
 \entry{fiseang}{f\super{j}ISaN} \definition{v.}{Draw, to sketch (something or someone) in lines or words; delineate; depict.}
 \entry{fódua}{f\super{G}o:\textsubbridge{d}\super{G}u\textsubarch{@}} \definition{v.}{Date, to go out socially on dates.}
 \entry{frag}{f\super{G}R\super{G}@\textsubarch{i}g} \definition{n.}{Field, an expanse of open or cleared ground, especially a piece of land suitable or used for pasture or tillage. Also refers to Arena, a central stage, ring, area, or the like, used for sports or other forms of entertainment, surrounded by seats for spectators.}
@@ -605,6 +681,7 @@ As for diphthongs...
 \entry{piad}{p\super{j}i\textsubarch{@}\textsubbridge{d}\super{G}} \definition{v.}{Be, to exist or live; to take place; happen; occur; to occupy a place or position; used as a copula to connect the subject with its predicate adjective, or predicate nominative, in order to describe, identify, or amplify the subject.}
 \entry{pímh}{p\super{j}i:v\super{j}} \definition{n.}{Trouble, difficulty, annoyance, or harassment.}
 \entry{pis}{p\super{j}IS} \definition{n.}{Fight, any contest or struggle.}
+\entry{pismei}{p\super{j}ISm\super{j}E} \definition{adv.}{Again, once more; another time; anew; in addition.}
 \entry{pom}{p\super{G}Om\super{G}} \definition{n.}{Intervention, interposition or interference of one state in the affairs of another.}
 \entry{pua}{p\super{G}u\textsubarch{@}} \definition{adv.}{Once, at one time in the past; formerly.}
 \end{description}
@@ -647,6 +724,9 @@ As for diphthongs...
 \entry{sigeart}{SI{\textbardotlessj}aR\super{G}@\textsubbridge{t}\super{G}} \definition{n.}{Pencil, a slender tube of wood, metal, plastic, etc., containing a core or strip of graphite, a solid coloring material, or the like, used for writing or drawing.}
 \entry{sir}{SIR\super{j}} \definition{adj.}{Blue, of the color of blue.}
 \entry{siúl}{Su:l\super{G}} \definition{n.}{Cell, a small room, as in a convent or prison. Also refers to Compartment, a part or space marked or partitioned off.}
+\entry{smaicri}{s\super{G}m\super{G}@\textsubarch{u}cR\super{j}I} \definition{n.}{Light, something that makes things visible or affords illumination.}
+\entry{smaicrithiu}{s\super{G}m\super{G}@\textsubarch{u}cR\super{j}Ihu} \definition{adj.}{Bright, radiating or reflecting light; luminous; shining.}
+\entry{smu}{s\super{G}m\super{G}U} \definition{adv.}{Now, at the present time or moment.}
 \entry{stalar}{s\super{G}\textsubbridge{t}\super{G}@\textsubarch{i}l\super{G}@\textsubarch{i}R\super{G}} \definition{n.}{Sadness, the quality or state of being sad; sorrow.}
 \entry{stán}{s\super{G}\textsubbridge{t}\super{G}A:\textsubbridge{n}\super{G}} \definition{n.}{Community, a social group of any size whose members reside in a specific locality, share government, and often have a common cultural and historical heritage.}
 \entry{stuis}{s\super{G}\textsubbridge{t}\super{G}IS} \definition{n.}{Bag, a container or receptacle of leather, plastic, cloth, paper, etc., capable of being closed at the mouth; pouch.}
